@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Lists - Styled</title>
+    <style>
+        /* General Styling */
+        h1 {
+            color: darkblue;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Course List Styling */
+        .theory {
+            color: green;
+            font-weight: bold;
+            font-family: "Georgia", serif;
+        }
+
+        .lab {
+            color: darkred;
+            font-style: italic;
+            font-family: "Courier New", monospace;
+        }
+
+        /* Programming Languages List Styling */
+        .languages-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .languages-list li {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .languages-list li:hover {
+            transform: scale(1.2);
+        }
+
+        .languages-list img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 5px;
+        }
+
+        /* Concert List Styling */
+        .concert-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px;
+        }
+
+        .concert-list li {
+            font-family: Verdana, sans-serif;
+            background-color: #e9f5ff;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .concert-list li b {
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Audio Controls */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Winter 2024-2025 Courses -->
+    <h1>My Winter 2024-2025 Courses</h1>
+    <ul>
+        <li class="theory">Web Programming (Theory)</li>
+        <li class="lab">Web Programming (Lab)</li>
+        <li class="theory">Data Structures and Algorithms (Theory)</li>
+        <li class="lab">Data Structures and Algorithms (Lab)</li>
+        <li class="theory">Database Management Systems (Theory)</li>
+        <li class="lab">Database Management Systems (Lab)</li>
+    </ul>
+
+    <!-- Programming Languages List -->
+    <h1>Programming Languages and Ratings</h1>
+    <ul class="languages-list">
+        <li>
+            <img src="/Users/apple/Desktop/PYTHON.png" alt="Python Logo" width="50" height="50">
+            <br>Python - 9/10
+        </li>
+        <li>
+            <img src="/Users/apple/Desktop/JAVA.webp" alt="Java Logo" width="50" height="50">
+            <br>Java - 9/10
+        </li>
+        <li>
+            <img src="/Users/apple/Desktop/C.png" alt="C Logo" width="50" height="50">
+            <br>C - 6/10
+        </li>
+        <li>
+            <img src="/Users/apple/Desktop/C++.png" alt="C++ Logo" width="50" height="50">
+            <br>C++ - 10/10
+        </li>
+    </ul>
+
+    <!-- Favorite Music Concerts -->
+    <h1>My Favorite Music Concerts</h1>
+    <ul class="concert-list">
+        <li onmouseover="playMusic('coldplay')" onmouseout="stopMusic()">
+            <b>Coldplay Concert:</b> An unforgettable experience with dazzling lights, soulful music, and an electrifying atmosphere.
+            <audio id="coldplay" src="/Users/apple/Downloads/cold-weather-111151.mp3" preload="auto"></audio>
+        </li>
+        <li onmouseover="playMusic('diluminati')" onmouseout="stopMusic()">
+            <b>Diluminati:</b> A spectacular fusion of EDM beats and mesmerizing visuals.
+            <audio id="diluminati" src="/Users/apple/Music/Music/Media.localized/Music/Diljit Dosanjh (RiskyjaTT.CoM)/G.O.A.T. (RiskyjaTT.CoM)/G.O.A.T. (RiskyjaTT.CoM).mp3" preload="auto"></audio>
+        </li>
+        <li onmouseover="playMusic('dream')" onmouseout="stopMusic()">
+            <b>It Was All a Dream:</b> A nostalgic journey through time with classic hits and emotional ballads.
+            <audio id="dream" src="/Users/apple/Downloads/Chitta_Kurta_1.mp3" preload="auto"></audio>
+        </li>
+    </ul>
+
+    <script>
+        function playMusic(artist) {
+            var audio = document.getElementById(artist);
+            if (audio) {
+                audio.play();
+                console.log("Playing music:", artist); // Debugging message
+            } else {
+                console.log("Audio not found:", artist); // Debugging message if audio is not found
+            }
+        }
+
+        function stopMusic() {
+            var audios = document.querySelectorAll('audio');
+            audios.forEach(function(audio) {
+                audio.pause();
+                audio.currentTime = 0;
+            });
+        }
+    </script>
+</body>
+</html>
