@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Figure Layout</title>
+    <style>
+        /* Custom styles for shading */
+        .shaded {
+            background-color: #87CEEB; /* Replace with your favorite color */
+        }
+    </style>
+</head>
+<body>
+
+<!-- A table with borders, centered, using basic attributes -->
+<table border="1" cellspacing="0" cellpadding="6" align="center">
+    <!-- Caption with <font> as requested -->
+    <caption>
+        <font face="Arial" size="4" color="blue">
+            Puzzle-Style Layout
+        </font>
+    </caption>
+
+    <!-- Row 1 -->
+    <tr>
+        <!-- r1c1 in the top-left -->
+        <td>
+            <img src="/Users/apple/Desktop/osama.jpg" width="100" height="100" alt="Image">
+        </td>
+        <!-- Leave one blank cell to give the same "gap" as in the figure -->
+        <td></td>
+        <!-- r1c3 spans two rows so that r2c3 appears directly below it -->
+        <td class="shaded" rowspan="2">
+            r1c3<br />
+            <a href="mailto:aakashdeep.singh2023@vitstudent.ac.in">Email</a>
+        </td>
+        <!-- r1c4 includes positive affirmation -->
+        <td>Stay positive and keep growing!</td>
+        <td>r1c5</td>
+        <!-- Extra blank cell on the far right (if you interpret 6 columns total) -->
+        <td></td>
+    </tr>
+
+    <!-- Row 2 (mostly empty because r1c3 row-spanned down) -->
+    <tr>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <!-- The 6th column stays blank here -->
+    </tr>
+
+    <!-- Row 3 -->
+    <tr>
+        <td>
+            <a href="home.html">Home</a>
+        </td>
+        <td colspan="2"></td> <!-- a wider gap across two cells -->
+        <td>
+            <a href="https://github.com/">
+                <img src="/Users/apple/Desktop/pikapika.jpg" alt="Pika" width="100" height="100">
+            </a>
+        </td>
+        <td></td>
+        <td>r3c6</td>
+    </tr>
+
+    <!-- Row 4 -->
+    <tr>
+        <td class="shaded">r4c1</td>
+        <td class="shaded">r4c2</td>
+        <td></td>
+        <td>r4c4</td>
+        <td>r4c5</td>
+        <td></td>
+    </tr>
+
+    <!-- Row 5 -->
+    <tr>
+        <td class="shaded">r5c1</td>
+        <td></td>
+        <td>Keep pushing forward!</td>
+        <td></td>
+        <td>You are capable of amazing things!</td>
+        <td></td>
+    </tr>
+
+    <!-- Row 6 -->
+    <tr>
+        <!-- Blank area in the first 3 columns, then r6c4 in the 4th column -->
+        <td colspan="3"></td>
+        <td>Believe in yourself!</td>
+        <td colspan="2"></td>
+    </tr>
+</table>
+
+</body>
+</html>
