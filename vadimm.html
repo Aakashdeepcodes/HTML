@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            width: 100px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .logo-container img:hover {
+            transform: scale(1.1);
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            position: relative;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 150px;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .cta-button, .login-button {
+            background-color: #008060;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .login-button {
+            background-color: #00575d;
+        }
+        main {
+            padding: 30px;
+            background-color: #f0fcf7;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .hero-text {
+            max-width: 50%;
+        }
+        .hero-text h1 {
+            font-size: 36px;
+            color: #00575d;
+            margin-bottom: 20px;
+        }
+        .hero-text p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .hero-text .cta-button {
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .hero-image img {
+            width: 90%;
+            border-radius: 10px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .feature-card {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            margin: 0 10px;
+        }
+        .feature-card img {
+            width: 50px;
+            margin-bottom: 15px;
+        }
+        .feature-card h3 {
+            font-size: 18px;
+            color: #00575d;
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="#">
+                <img src="https://cdn.shopify.com/assets/images/logos/shopify-bag.png" alt="Shopify Logo">
+            </a>
+        </div>
+        <nav>
+            <div class="dropdown">
+                <a href="#">Start</a>
+                <div class="dropdown-content">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Sell</a>
+                <div class="dropdown-content">
+                    <a href="#">Sales Channels</a>
+                    <a href="#">Overview</a>
+                    <a href="#">Facebook and Instagram</a>
+                    <a href="#">Walmart Marketplace</a>
+                    <a href="#">eBay</a>
+                    <a href="#">Amazon</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Market</a>
+                <div class="dropdown-content">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Manage</a>
+                <div class="dropdown-content">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                </div>
+            </div>
+            <a href="#">Pricing</a>
+            <div class="dropdown">
+                <a href="#">Learn</a>
+                <div class="dropdown-content">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                    <a href="#">Option 4</a>
+                    <a href="#">Option 5</a>
+                </div>
+            </div>
+        </nav>
+        <div>
+            <a href="login.html" class="login-button">Log In</a>
+            <a href="#" class="cta-button">Start free trial</a>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Grow your business with Facebook and Instagram — from one place</h1>
+                <p>With over 1.7 billion active users, Facebook and Instagram let you sell and market where your customers are.</p>
+                <a href="#" class="cta-button">Install Facebook</a>
+                <p><a href="#">Don't have a Shopify store?</a></p>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/400" alt="Hero Image">
+            </div>
+        </div>
+        <div class="features">
+            <div class="feature-card">
+                <img src="https://via.placeholder.com/50" alt="Icon">
+                <h3>Sync your product catalog</h3>
+                <p>Your Shopify products automatically sync to Facebook and Instagram so you can easily create ads and shoppable posts.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://via.placeholder.com/50" alt="Icon">
+                <h3>Sell where people shop</h3>
+                <p>Find the right features to market and sell your products in front of Facebook and Instagram shoppers.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://via.placeholder.com/50" alt="Icon">
+                <h3>Manage from within Shopify</h3>
+                <p>Use Shopify to create, track, and manage your ad campaigns and orders with Facebook.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
